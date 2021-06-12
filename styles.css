@@ -43,7 +43,7 @@ body{
     top:0;
     left: 0;
     z-index: 10;
-    object-fit:fill;
+    object-fit:cover;
 }
 .title{
     position: absolute;

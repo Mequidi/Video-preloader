@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Roboto:wght@400;900&display=swap');
+
+:root{
+    --font-primary: 'Roboto', sans-serif;
+    --font-secondary:'Open Sans', sans-serif;
+    --spacing:3px;
+}
+*{
+    box-sizing: border-box;
+}
+*, ::after, ::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-secondary);
+}
+.preloader-container{
+    position:fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    background-color:whitesmoke;
+    transition: all 0.3s linear;
+    visibility: visible;
+}
+.hide-preloader{
+    visibility: hidden;
+    z-index: -999;
+}
+.video-container{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top:0;
+    left: 0;
+    z-index: 10;
+    object-fit:fill;
+}
+.title{
+    position: absolute;
+    display: block;
+    top:40%;
+    text-align: center;
+    width: 100%;
+    z-index: 20;
+    color: white;
+    text-transform: capitalize;
+    padding: 0;
+    margin: 0;
+    font-family: var(--font-primary);
+    letter-spacing: var(--spacing);
+    font-size: 60px;
+}
+
+.toggle-btn{
+    position: absolute;
+    display: flex;
+    z-index: 20;
+    bottom: 8%;
+    left: 5%;
+    background-color: white;
+    border-radius: 0.5rem;
+    text-transform: uppercase;
+    justify-content: space-around;
+    height: 2rem;
+    width: 8rem;
+    align-items: center;
+    border: none;
+    transition: all 0.3s linear;
+}
+
+header::after{
+    content: "";
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0, 0.6);
+    /* opacity: 0.5; */
+    z-index: 15;
+}
+.toggle-btn span{
+    font-size: 0.875rem;
+    cursor: pointer;
+    display: inline-block;
+    color:hsl(86, 79%, 31%);
+}
+
+.switch{
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 50%;
+    background-color: hsl(86, 79%, 31%);
+    height: 100%;
+    border-radius: 0.5rem;
+    transition: all 0.4s linear;
+}
+.slide .switch{
+    left:50%;
+}
